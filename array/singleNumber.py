@@ -12,3 +12,10 @@ class Solution(object):
             a ^= c
             b ^= c
         return a
+
+    def singleNumber1(self, nums):
+        a = b = 0
+        for x in nums:
+            a ^= x
+            b ^= x
+        return a ^ b
