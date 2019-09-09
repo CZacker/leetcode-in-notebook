@@ -14,7 +14,7 @@ class LinkList(object):
     def __getitem__(self, key):
 
         if self.is_empty():
-            print('linklist is empty.')
+            print('LLinklist is empty.')
             return
 
         elif key < 0 or key > self.getlength():
@@ -27,7 +27,7 @@ class LinkList(object):
     def __setitem__(self, key, value):
 
         if self.is_empty():
-            print('linklist is empty.')
+            print('Linklist is empty.')
             return
 
         elif key < 0 or key > self.getlength():
