@@ -215,38 +215,38 @@
 #         print(values[results.index(max(results))])
 
 # 解密问题
-import sys
-
-code_book = {'1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E', '6': 'F', '7': 'G', '8': 'H', '9': 'I', '10': 'J',
-             '11': 'K', '12': 'L', '13': 'M', '14': 'N', '15': 'O', '16': 'P', '17': 'Q', '18': 'R', '19': 'S',
-             '20': 'T', '21': 'U', '22': 'V', '23': 'W', '24': 'X', '25': 'Y', '26': 'Z'}
-if __name__ == "__main__":
-    # 读取第一行的n
-    line = sys.stdin.readline().strip()
-    code_input = [i for i in line]
-    results = ['']
-    for i in code_input:
-        results[0] += code_book[i]
-    m = '0'
-    i = 1
-    por = []
-
-    while i < len(code_input):
-        m = line[i-1:i+1]
-        if not int(m) > 26:
-            por.append(m)
-            i += 2
-        else:
-            por.append(line[i-1])
-            i += 1
-    result = ''
-
-    for i in por:
-        result += code_book[i]
-    results.append(result)
-
-    for i in results:
-        print(i)
+# import sys
+#
+# code_book = {'1': 'A', '2': 'B', '3': 'C', '4': 'D', '5': 'E', '6': 'F', '7': 'G', '8': 'H', '9': 'I', '10': 'J',
+#              '11': 'K', '12': 'L', '13': 'M', '14': 'N', '15': 'O', '16': 'P', '17': 'Q', '18': 'R', '19': 'S',
+#              '20': 'T', '21': 'U', '22': 'V', '23': 'W', '24': 'X', '25': 'Y', '26': 'Z'}
+# if __name__ == "__main__":
+#     # 读取第一行的n
+#     line = sys.stdin.readline().strip()
+#     code_input = [i for i in line]
+#     results = ['']
+#     for i in code_input:
+#         results[0] += code_book[i]
+#     m = '0'
+#     i = 1
+#     por = []
+#
+#     while i < len(code_input):
+#         m = line[i-1:i+1]
+#         if not int(m) > 26:
+#             por.append(m)
+#             i += 2
+#         else:
+#             por.append(line[i-1])
+#             i += 1
+#     result = ''
+#
+#     for i in por:
+#         result += code_book[i]
+#     results.append(result)
+#
+#     for i in results:
+#         print(i)
 
 # 取水问题
 # import sys
@@ -259,3 +259,46 @@ if __name__ == "__main__":
 #     bottles = values[:3]
 #     water = values[3]
 #
+
+# #coding=utf-8
+# import sys
+#
+#
+# def find_int(num):
+#     if num < 2:
+#         return 1
+#     count = 0
+#     for i in range(1, num):
+#         s = i*(i+1)//2
+#         if s < num:
+#             if (num-s)%i == 0:
+#                 count += 1
+#         elif s == num:
+#             count += 1
+#             break
+#         else:
+#             break
+#     return count
+#
+#
+# if __name__ == "__main__":
+#     # 读取第一行的n
+#     n = int(sys.stdin.readline().strip())
+#     ans = find_int(n)
+#     print(ans)
+
+#coding=utf-8
+import sys
+if __name__ == "__main__":
+    # 读取第一行的n
+    a = sys.stdin.readline().strip()
+    b = sys.stdin.readline().strip()
+    count = 0
+    for i, iv in enumerate(a):
+        for j, jv in enumerate(a):
+            if a[i:i + j] in b:
+                continue
+            else:
+                count += 1
+                break
+    print(count - 1)
