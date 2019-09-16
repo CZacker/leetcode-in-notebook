@@ -287,18 +287,18 @@
 #     ans = find_int(n)
 #     print(ans)
 
-#coding=utf-8
-import sys
-if __name__ == "__main__":
-    # 读取第一行的n
-    a = sys.stdin.readline().strip()
-    b = sys.stdin.readline().strip()
-    count = 0
-    for i, iv in enumerate(a):
-        for j, jv in enumerate(a):
-            if a[i:i + j] in b:
-                continue
-            else:
-                count += 1
-                break
-    print(count - 1)
+# #coding=utf-8
+# import sys
+# if __name__ == "__main__":
+#     # 读取第一行的n
+#     a = sys.stdin.readline().strip()
+#     b = sys.stdin.readline().strip()
+#     count = 0
+#     for i, iv in enumerate(a):
+#         for j, jv in enumerate(a):
+#             if a[i:i + j] in b:
+#                 continue
+#             else:
+#                 count += 1
+#                 break
+#     print(count - 1)
